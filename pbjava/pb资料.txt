@@ -1,0 +1,20 @@
+from  pyecharts  import   Liquid
+#健壮 安全，什么情况下都是逻辑正确
+#导入包下的文件的所有的方法
+from eview.two import *
+
+name=input("请输入员工的姓名:")
+
+data=queryEmpSalary(name)
+
+print("----------***-------------",data)
+
+if data  is  None:
+    print("用户名不存在")
+else:
+    lidatas = []
+    lidatas.append(data)
+    print(lidatas)
+
+    # 创建水球图对象
+    liObj = Liquid("员工工资百分比图")
